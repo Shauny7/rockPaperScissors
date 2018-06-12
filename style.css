@@ -1,0 +1,58 @@
+html {
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+}
+body {
+    margin: 0;
+}
+h1 {
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+
+.title-container {
+    background-color: rgba(0,0,0,0.3);
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+    margin-top: 150px;
+}
+
+.buttons {
+    background-color: rgba(0,0,0,0.3);
+    border: solid 4px black;
+    padding: 150px;
+    border-radius: 10px;
+}
+
+.buttons:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: solid 4px black;
+    padding: 150px;
+    border-radius: 10px;
+}
+
+.fa-hand-rock {
+    color: white;
+    font-size: 100px;
+}
+
+.fa-hand-paper {
+    color: white;
+    font-size: 100px;
+}
+
+.fa-hand-scissors {
+    color: white;
+    font-size: 100px;
+}
