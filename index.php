@@ -19,34 +19,33 @@ if ($_POST["player_input"]) {
    
     $player_input = $_POST["player_input"];
 
+    $message = false;
 
-
-    if ($player_input == 'rock' && $computer == 'scissors') {
-        echo "<h2>You win!</h2>";
-    } else if 
-        ($player_input == 'paper' && $computer == 'rock') {
-            echo "<h2>You win!</h2>";
-    } else if 
-        ($player_input == 'scissors' && $computer == 'paper') {
-            echo "<h2>You win!</h2>";
-    } else if 
-        ($player_input == 'rock' && $computer == 'paper') {
-            echo "<h2>You lose!</h2>";
-    } else if 
-        ($player_input == 'paper' && $computer == 'scissors') {
-            echo "<h2>You lose!</h2>";
-    } else if 
-        ($player_input == 'scissors' && $computer == 'rock') {
-            echo "<h2>You lose!</h2>";
-    } else if 
-        ($player_input == $computer) {
-            echo "<h2>It's a tie!</h2>";
-    } else {
-        echo "<h1>NO MATCH FOUND</h1>";
+    if ($player_input == 'rock' && $computer == 'scissors'
+        || $player_input == 'paper' && $computer == 'rock'
+        || $player_input == 'scissors' && $computer == 'paper') {
+        $message = "You win!";
+    } 
+    else if ($player_input == 'rock' && $computer == 'paper'
+            || $player_input == 'paper' && $computer == 'scissors'
+            || $player_input == 'scissors' && $computer == 'rock') {
+        $message = "You lose!";
+    } 
+    else {
+        $message = "It's a tie!";
     }
+
+    // Set the file name to a variable (e.g. stats.json)
+    // Check if the file exists
+    // If it doesn't, create the file
+    // If it does, read the file, parse as JSON, and output wins, losses, and ties (e.g. $file['wins'])
+    // Increment whichever outcome has happened (win, lose, tie), and write it back to the file
 }
 ?>
 
+<?php if($message) { ?>
+    <h2><?php echo $message ?></h2>
+<?php } ?>
 
 <form method="post">
     <div class="button-container">
