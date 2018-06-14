@@ -21,6 +21,8 @@ if ($_POST["player_input"]) {
 
     $message = false;
 
+
+echo "<p>Your opponent chose: " . $computer . "</p>";
     if ($player_input == 'rock' && $computer == 'scissors'
         || $player_input == 'paper' && $computer == 'rock'
         || $player_input == 'scissors' && $computer == 'paper') {
